@@ -1,0 +1,29 @@
+transformers
+torch
+groq
+numpy
+tavily-python
+ragas
+datasets
+langchain-together
+langchain-core
+qdrant-client
+fastembed
+quotientai
+langchain-community
+gpt4all
+!pip install arize-otel openai
+openinference-instrumentation-openai opentelemetry-sdk
+opentelemetry-exporter-otlp
+!pip install arize-phoenix
+!pip install -q 'arize[LLM_Evaluation]' llama_index
+!pip install llama-index-embeddings-huggingface
+!pip install --upgrade huggingface-hub==0.23.0
+!pip install -qq "arize-phoenix[evals,llama-index]"
+"llama-index-llms-openai" "openai>=1" gcsfs nest_asyncio
+!pip install litellm
+!pip install langchain_community
+!pip install transformers -U
+!pip install llama-index-vector-stores-qdrant
+llama-index-readers-file llama-index-embeddings-fastembed
+llama-index-llms-openai
