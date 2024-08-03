@@ -3,18 +3,11 @@ from groq import Groq
 from qdrant_client import QdrantClient, models
 import re
 from tavily import TavilyClient
-from datasets import Dataset
-from ragas import evaluate
-from ragas.metrics import (
-    faithfulness,
-    answer_relevancy,
-    context_recall,
-    context_precision,
-)
+
 
 # Set API keys
-os.environ["GROQ_API_KEY"] = "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"
-os.environ["TAVILY_API_KEY"] = "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"
+os.environ["GROQ_API_KEY"] = "GROQ_API_KEY"
+os.environ["TAVILY_API_KEY"] = "TAVILY_API_KEY"
 groq_client = Groq()
 tavily_api_key = os.environ["TAVILY_API_KEY"]
 

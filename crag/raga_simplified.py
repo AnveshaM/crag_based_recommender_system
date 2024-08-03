@@ -3,8 +3,6 @@ from groq import Groq
 from qdrant_client import QdrantClient, models
 import re
 from ragas.run_config import RunConfig
-from tavily import TavilyClient
-import pandas as pd
 from ragas import evaluate
 from ragas.metrics import (
     faithfulness,
@@ -14,50 +12,19 @@ from ragas.metrics import (
 )
 import json
 from datasets import Dataset
-# from langchain_together import Together
-# from langchain_together.embeddings import TogetherEmbeddings
-from langchain_core.language_models import BaseLanguageModel
-from langchain_core.embeddings import Embeddings
-from langchain_community.embeddings import GPT4AllEmbeddings
 from langchain_community.llms.ollama import Ollama
 from langchain_community.embeddings.fastembed import FastEmbedEmbeddings
 
 
 # Set API keys
-os.environ["GROQ_API_KEY"] = "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"
-os.environ["TAVILY_API_KEY"] = "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"
-# os.environ["OPENAI_API_KEY"] = "sk-proj-DQ1R3C8pGpIlJiWePLF9T3BlbkFJ3b3icAjYGI7wkPAVGqEq"
+os.environ["GROQ_API_KEY"] = "GROQ_API_KEY"
+os.environ["TAVILY_API_KEY"] = "TAVILY_API_KEY"
 groq_client = Groq()
 tavily_api_key = os.environ["TAVILY_API_KEY"]
-# os.environ["TOGETHER_API_KEY"] = "61eb011da7353b572f7e3d776480d2c285d40050e3c2db034350839d5d44f217"
-# together_key = os.environ["TOGETHER_API_KEY"]
-# embeddings = TogetherEmbeddings(model="togethercomputer/mtogethercomputer/m2-bert-80M-8k-retrieval")
-
-# together_completion = Together(
-#     model="meta-llama/Meta-Llama-3-70B",
-#     temperature=0.7,
-#     max_tokens=8100,
-#     top_k=1,
-#     together_api_key=together_key
-# )
 
 # define llm and embeddings
 langchain_llm = Ollama(model="llama3") # any langchain LLM instance
 fast_embeddings = FastEmbedEmbeddings(model_name="BAAI/bge-base-en")
-# model_name = "all-MiniLM-L6-v2.gguf2.f16.gguf"
-# gpt4all_kwargs = {'allow_download': 'True'}
-# embeddings = GPT4AllEmbeddings(
-#     model_name=model_name,
-#     gpt4all_kwargs=gpt4all_kwargs
-# )
-
-# make sure to wrap them with wrappers
-from ragas.llms import LangchainLLMWrapper
-from ragas.embeddings import LangchainEmbeddingsWrapper
-
-# langchain_llm = LangchainLLMWrapper(langchain_llm)
-
-
 
 
 # Initialize Qdrant client
