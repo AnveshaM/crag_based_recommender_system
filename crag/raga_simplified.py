@@ -170,10 +170,7 @@ ground_truth = [
     "Based on the user's history and external data, I recommend the PIGGY BANK RETROSPOT (StockCode: 77). This item matches the user's interest in RetroSpot-themed products and fits their preference for decorative home decor. Additionally, similar users have shown interest in this item, making it a great choice for User 12357.",
 "Based on the user's history and external data, I recommend the JUMBO SHOPPER VINTAGE RED PAISLEY (StockCode: 70). This item suits the user's preference for home decor and novelty items, as evidenced by their interest in hot water bottles and metal signs. The bag's vintage and decorative style, along with its vibrant and whimsical design, aligns with the user's taste for quirky and humorous items, making it a likely favorite."
 ]
-# "recommend me some items to buy if I have recently purchased a SET OF 3 BUTTERFLY COOKIE CUTTERS",
-# "recommend me articles for customer id 12556 if the customer is interested in home decor"
-# "any baking related tool",
-# "any heart shaped decor or any other quirky home decor items"
+
 answers = []
 contexts = []
 

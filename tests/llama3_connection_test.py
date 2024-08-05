@@ -1,6 +1,6 @@
 import os
 from groq import Groq
-os.environ["GROQ_API_KEY"] = "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"
+os.environ["GROQ_API_KEY"] = "GROQ_API_KEY"
 client = Groq()
 response = client.chat.completions.create(
     messages = [
